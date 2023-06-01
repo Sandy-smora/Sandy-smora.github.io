@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    cursor: url(PICTURES/Kirby_Cursor.png), auto;
+}
+
+.bg-vid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(75%)
+}
+
+@media (min-aspect-ration: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-aspect-ration: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/*navigation*/
+.topbar {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    background-image: linear-gradient(#E60012 70%, #d40516);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .company-logo {
+    width: 200px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    opacity: 0.7;
+    transform: 0.5s;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+}
+
+/*the css for overview*/
+
+.kirby-overview {
+    background-image: linear-gradient(#5C95EE, #7BBCF8, #A1E4FF, #FFEFD0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    color: black;
+}
+
+.overview{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.overview-desc{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1150px;
+    font-size: 25px;
+}
+
+.overview-desc .overview-image{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.overview-desc .overview-image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.overview-desc .overview-text{
+    z-index: 222;
+    background: rgb(255, 251, 241);
+    box-shadow:  0 3px 50px rgb(230, 211, 177);
+    padding: 40px;
+    max-width: 600px;
+    outline: .9rem dotted #ffffff;
+    color:#1e5f84;
+    border-radius: 35px;
+    transform: translate(-30px, -35px);
+}
+
+/*the css foe character section*/
+
+.kirby-characters{
+    background-image: linear-gradient(#FFEFD0, #FEB0A4, #CD66B0, #C590EC);
+}
+
+.characters{
+    background-image: linear-gradient(#FFEFD0, #FEB0A4, #CD66B0);
+}
+
+.char{
+    height: 500px;
+    margin: 50px;
+    background-color: #FFEFD0;
+    box-shadow: 5px 5px 20px #bb54af;
+    overflow: hidden;
+}
+
+.other-char{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.img-char{
+    height: 300px;
+}
+
+.characters .char .desc{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+/*the section foe the kirby games*/
+.kirby-games{
+    background-image: linear-gradient(#C590EC, #F3BADC, #FEF2E5, #F4D1D7);
+}
+
+.kirby-games1 {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    font-size: 75%;
+    overflow-x: hidden;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.kirby-games .games-title {
+    font-size: 4.5rem;
+    color: #101470;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.kirby-games .games-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+}
+
+.kirby-games .games-list .games{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f9f6ed;
+    box-shadow:  0 3px 20px rgb(164, 60, 165);
+    outline: .9rem dotted #ffb5c6;
+    border-radius: 35px;
+    outline-offset: -1.5rem;
+}
+
+.kirby-games .games-list .games:hover{
+    outline: .7rem dotted #f8e5e9;
+    outline-offset: 0;
+}
+
+.kirby-games .games-list .games img{
+    height: 15rem;
+}
+
+.kirby-games .games-list .games:hover img{
+    transform: scale(.8);
+}
+
+.kirby-games .games-list .games h2{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: rgb(91, 22, 92);
+}
+
+.kirby-games .games-list .games:hover h2{
+    color: #FF8FA9;
+}
+
+.kirby-games .games-list .games h3{
+    color: rgb(123, 33, 116);
+    font-size: 23px;
+}
+
+.kirby-games .games-list .games span{
+    color: rgb(152, 40, 100);
+    font-size: 19px;
+}
+
+/*the media and vids*/
+.kirby-media-vids{
+    background-image: linear-gradient(#F4D1D7, #8C96D8, #5A71A5, #256589);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.kirby-media{
+    max-width: 1120px;
+    width: 80;
+    display: block;
+    margin: 0 auto;
+    .media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 38px;
+        .media-vids{
+            width: 60%;
+            position: relative;
+            padding-bottom: 56.16%;
+            height:0;
+        }
+        .vids{
+            width:38%;
+            margin-left: 2%;
+        }
+    }
+    .media-thumbnails{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .thumbnails{
+            width:calc(90% / 4);
+            .media-img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+/*the css for the footer*/
+footer {
+    background-image: linear-gradient(#256589, #5292AD, #7DB1BC, #eaddc0);
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+}
+
+.media a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f6f3eb;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.media i {
+    font-size: 2em;
+    color: #5292AD;
+    opacity: 0.9s;
+}
+
+.media a:hover {
+    background-color: #5292AD;
+    transition: 0.5s;
+}
+
+.media a:hover i {
+    color: #f6f3eb;
+    transition: 0.5s
+}
+
+.support {
+    margin: 30px 0;
+}
+
+.support ul {
+    display: flex;
+    justify-content: center;
+}
+
+.support ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.support ul li a {
+    color: #f6f3eb;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transform: 0.5s;
+}
+
+.support ul li a:hover {
+    opacity: 1;
+}
+
+.license {
+    padding: 20px;
+    text-align: center;
+}
+
+.license p {
+    color: #f6f3eb;
+}
